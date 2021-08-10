@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="application.MainController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <Label fx:id="titulo" alignment="CENTER" layoutX="-1.0" layoutY="22.0" maxWidth="400.0" prefHeight="21.0" prefWidth="400.0" text="Primeiro Exemplo JavaFX" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="certeza" layoutX="162.0" layoutY="140.0" mnemonicParsing="false" text="Certeza?" />
+            <TextField fx:id="escritura" layoutX="115.0" layoutY="79.0" />
+         </children>
+      </Pane>
+   </children>
+</HBox>
