@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane prefHeight="302.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="application.MainController">
+<BorderPane prefHeight="302.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="frisney.com.github.calculadoraimc.controllers.MainController">
    <center>
       <VBox alignment="CENTER" prefHeight="229.0" prefWidth="400.0" spacing="25.0" BorderPane.alignment="CENTER">
          <children>

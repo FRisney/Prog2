@@ -1,4 +1,4 @@
-package application;
+package frisney.com.github.calculadoraimc.application;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
