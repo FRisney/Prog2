@@ -1,6 +1,7 @@
 module CalculadoraIMC {
 	requires javafx.controls;
 	requires javafx.fxml;
+	requires javafx.graphics;
 	
 	exports frisney.com.github.calculadoraimc.controllers;
 	

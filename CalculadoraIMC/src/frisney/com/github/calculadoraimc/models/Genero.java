@@ -5,10 +5,10 @@ import java.util.List;
 public abstract class Genero {
 	protected List<Categoria> categorias;
 	
-	public String testCategoria(Double imc) {
+	public Categoria testCategoria(Double imc) {
 		for(Categoria cat : this.categorias) {
-			if(imc > cat.indice) return cat.descicao;
+			if(cat.check(imc)) return cat;
 		}
-		return "Abaixo do Peso";
+		return null;
 	}
 }
