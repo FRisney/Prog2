@@ -1,19 +1,19 @@
+package frisney.com.github.util;
+
 import java.io.BufferedReader;
-import java.io.EOFException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MeuReaderCsv {
     private String arquivo;
-    private static String separador;
+    private String separador;
 
-    public static void usarVirgula(){  MeuReaderCsv.separador = ","; }
-    public static void usarPontoVirgula(){  MeuReaderCsv.separador = ";"; }
+    public void usarVirgula(){  separador = ","; }
+    public void usarPontoVirgula(){  separador = ";"; }
 
     public MeuReaderCsv(String arquivo){
-        MeuReaderCsv.usarPontoVirgula();
+        usarPontoVirgula();
         this.setArquivo(arquivo);
     }
 
@@ -29,9 +29,9 @@ public class MeuReaderCsv {
         return lido;
     }
 
-    public static ArrayList<String> parseLinha(String linha){
+    public ArrayList<String> parseLinha(String linha){
         ArrayList<String> ret = new ArrayList<>();
-        for (String campo: linha.split(MeuReaderCsv.separador)){
+        for (String campo: linha.split(separador)){
             ret.add(campo);
         }
         return ret;
@@ -44,7 +44,7 @@ public class MeuReaderCsv {
             BufferedReader in = new BufferedReader(new FileReader(this.getArquivo()));
             linha = in.readLine();
             while(linha != null){
-                ret.add(MeuReaderCsv.parseLinha(linha));
+                ret.add(parseLinha(linha));
                 linha = in.readLine();
             };
             in.close();
