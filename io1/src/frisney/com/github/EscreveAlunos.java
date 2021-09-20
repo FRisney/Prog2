@@ -7,7 +7,7 @@ import frisney.com.github.util.MeuWriterCsv;
 
 import java.util.ArrayList;
 
-public class Programa {
+public class EscreveAlunos {
 
     public static void main(String[] args) {
         Alunos alunos = new Alunos();
@@ -27,21 +27,5 @@ public class Programa {
             wrt.novaLinha();
         }
         wrt.escrever();
-
-        Alunos alunosLidos = new Alunos();
-
-        MeuReaderCsv rd = new MeuReaderCsv("alunos-origem");
-        for (ArrayList<String> alunoString:rd.lerTodoArquivo()){
-            alunosLidos.add(new Aluno (
-                Integer.parseInt(alunoString.get(0)),
-                alunoString.get(1),
-                alunoString.get(2),
-                alunoString.get(3)
-            ));
-        }
-
-        for (Aluno aluno: alunosLidos){
-            System.out.println(aluno.toString());
-        }
     }
 }
